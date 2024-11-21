@@ -5,7 +5,7 @@ import Registrationform from './Classcomp';
 
 function App() {
   return (
-   <div style={{width:"1440px", backgroundColor:"white" }}>
+   <div>
         <Registrationform/>
    </div>
   )

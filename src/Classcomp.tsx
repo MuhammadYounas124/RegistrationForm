@@ -83,16 +83,18 @@ function RegistrationForm() {
   
 
   return (
-    <div className="container-fluid bg-dark py-5 d-flex justify-content-center align-items-center" style={{width:"50%" }}>
-      <div className="container bg-white p-5 shadow-lg rounded-lg">
+      <div className="d-flex justify-content-center align-items-center min-vh-50 bg-dark">
+        <div className="card shadow-lg p-4 bg-dark">
+        <div className="container bg-white p-5 shadow-lg rounded-lg">
         <h1 className="text-center mb-4 text-primary">School Registration Form</h1>
         <form onSubmit={handleSubmit}>
-          {/* Name Fields */}
+          {/* Name Fields */}     
           <div className="row mb-4">
             <div className="col-md-6">
               <label className="form-label">First Name</label>
               <input
                 type="text"
+                 id="firstName"
                 name="firstName"
                 value={formData.firstName}
                 className="form-control"
@@ -126,6 +128,8 @@ function RegistrationForm() {
               className="form-control"
               onChange={handleChange}
               placeholder="Enter Year"
+               min="1900"
+               max="2099"
               required
               
             />
@@ -329,6 +333,7 @@ function RegistrationForm() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }
